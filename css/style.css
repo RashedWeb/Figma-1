@@ -1,0 +1,696 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --font-family: "Poppins", sans-serif;
+    --secondary-font: "Inter", sans-serif;
+    --primary-color: #FFCC00;
+    --secondary-color: #353535;
+    --text-color: #555555;
+    --white-color: #ffffff;
+    --border-color: #dddddd;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--white-color);
+    color: var(--secondary-color);
+    overflow-x: hidden;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.ashikur-portfolio-page {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.ashikur-navbar {
+    width: 100%;
+    padding: 15px 0;
+    background-color: var(--white-color);
+    position: relative;
+    z-index: 10;
+}
+
+.ashikur-nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ashikur-logo {
+    display: inline-block;
+    margin: 0;
+}
+
+.ashikur-logo img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+}
+
+#ashikurNavigation .nav-link {
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--secondary-color);
+    padding: 18px;
+    position: relative;
+    transition: var(--transition);
+}
+
+#ashikurNavigation .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: 10px;
+    height: 1.5px;
+    background-color: var(--secondary-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: var(--transition);
+}
+
+#ashikurNavigation .nav-link:hover::after,
+#ashikurNavigation .nav-link.active::after {
+    transform: scaleX(1);
+}
+
+#ashikurNavigation .nav-link:hover,
+#ashikurNavigation .nav-link.active {
+    color: var(--secondary-color);
+}
+
+.ashikur-navbar .navbar-toggler {
+    border: none;
+    box-shadow: none;
+    padding: 5px;
+}
+
+.ashikur-navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.ashikur-hero-section {
+    width: 100%;
+    padding: 45px 0 35px;
+    position: relative;
+}
+
+.ashikur-hero-section .row {
+    align-items: center;
+}
+
+.ashikur-hero-left {
+    padding-top: 20px;
+}
+
+.ashikur-greeting {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--secondary-color);
+    margin-bottom: 14px;
+}
+
+.ashikur-wave-img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.ashikur-hero-title {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.18;
+    color: var(--secondary-color);
+    margin-bottom: 22px;
+}
+
+.ashikur-hero-desc {
+    max-width: 500px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.75;
+    color: var(--text-color);
+    margin-bottom: 38px;
+}
+
+.ashikur-btn-group {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 52px;
+}
+
+.ashikur-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 32px;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.ashikur-btn-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.ashikur-btn-primary {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: 1.5px solid var(--primary-color);
+    box-shadow: 0 10px 25px rgba(255, 204, 0, 0.25);
+}
+
+.ashikur-btn-primary:hover {
+    background-color: #f2c200;
+    border-color: #f2c200;
+    color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+.ashikur-btn-outline {
+    background-color: var(--white-color);
+    color: var(--secondary-color);
+    border: 1.5px solid var(--secondary-color);
+}
+
+.ashikur-btn-outline:hover {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    transform: translateY(-3px);
+}
+
+.ashikur-social-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.ashikur-follow-text {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+.ashikur-social-icons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.ashikur-social-circle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #F4F3F3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.ashikur-social-circle img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.ashikur-social-circle:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-4px);
+}
+
+.ashikur-hero-right {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+}
+
+.ashikur-person-box {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 480px;
+    height: 500px;
+    border-radius: 24px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.ashikur-person-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom center;
+}
+
+.ashikur-brush-bg {
+    position: absolute;
+    width: 112%;
+    max-width: 540px;
+    top: 48%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.ashikur-badge {
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px;
+    background-color: var(--white-color);
+    border-radius: 12px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    font-size: 13px;
+    font-weight: 500;
+    color: #888888;
+}
+
+.ashikur-badge-ui {
+    top: 105px;
+    left: 10px;
+}
+
+.ashikur-dot-orange {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #FF6B2C;
+}
+
+.ashikur-badge-research {
+    top: 35px;
+    right: -10px;
+}
+
+.ashikur-badge-icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.ashikur-profile-card {
+    position: absolute;
+    z-index: 3;
+    bottom: 20px;
+    left: -15px;
+    width: 155px;
+    padding: 18px 22px;
+    background-color: var(--white-color);
+    border-radius: 18px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.09);
+    text-align: center;
+}
+
+.ashikur-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 8px;
+}
+
+.ashikur-profile-card h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 2px;
+}
+
+.ashikur-role {
+    font-size: 10px;
+    color: #999999;
+    margin-bottom: 10px;
+}
+
+.ashikur-stats strong {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.ashikur-stats span {
+    font-size: 9px;
+    color: #999999;
+}
+
+.ashikur-scroll-down {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.ashikur-mouse {
+    width: 24px;
+    height: 38px;
+    border: 1.8px solid #777777;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    padding-top: 7px;
+}
+
+.ashikur-wheel {
+    width: 2px;
+    height: 7px;
+    background-color: #777777;
+    border-radius: 2px;
+    animation: scrollWheel 1.6s infinite;
+}
+
+@keyframes scrollWheel {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+}
+
+.ashikur-about-section {
+    position: relative;
+    background: linear-gradient(90deg, #FFCC00 0%, #FFE169 65%, #FFF6C7 100%);
+    padding: 55px 0 0;
+    overflow: hidden;
+    font-family: var(--font-family);
+}
+
+.ashikur-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 2;
+}
+
+.ashikur-about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+}
+
+.ashikur-about-left {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 450px;
+}
+
+.ashikur-about-person {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 500px;
+    height: 450px;
+    display: block;
+    object-fit: contain;
+    object-position: bottom center;
+    margin-bottom: -4px;
+}
+
+.ashikur-about-right {
+    position: relative;
+    z-index: 2;
+    padding: 20px 0 55px;
+    text-align: left;
+}
+
+.ashikur-about-title {
+    font-size: 46px;
+    font-weight: 700;
+    color: #353535;
+    margin-bottom: 22px;
+    line-height: 1.2;
+}
+
+.ashikur-about-desc {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #353535;
+    max-width: 510px;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.ashikur-about-btn {
+    display: inline-block;
+    padding: 14px 36px;
+    border: 1.5px solid #353535;
+    border-radius: 16px;
+    color: #353535;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.ashikur-about-btn:hover {
+    background-color: #353535;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.ashikur-green-circle {
+    position: absolute;
+    bottom: -95px;
+    right: 55px;
+    width: 185px;
+    height: 185px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #55A869 0%, #86C994 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+@media (max-width: 991px) {
+    .ashikur-person-box {
+        max-width: 420px;
+        height: 420px;
+    }
+}
+
+@media (max-width: 767px) {
+    .ashikur-person-box {
+        max-width: 400px;
+        height: 380px;
+    }
+}
+
+@media (max-width: 575px) {
+    .ashikur-person-box {
+        max-width: 100%;
+        height: 320px;
+    }
+}
+
+@media (max-width: 380px) {
+    .ashikur-person-box {
+        height: 280px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .ashikur-about-grid {
+        gap: 30px;
+    }
+
+    .ashikur-about-title {
+        font-size: 40px;
+    }
+
+    .ashikur-about-left {
+        min-height: 400px;
+    }
+
+    .ashikur-about-person {
+        height: 400px;
+    }
+}
+
+@media (max-width: 991px) {
+    .ashikur-about-section {
+        padding-top: 40px;
+    }
+
+    .ashikur-about-grid {
+        gap: 25px;
+    }
+
+    .ashikur-about-title {
+        font-size: 34px;
+    }
+
+    .ashikur-about-desc {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .ashikur-about-left {
+        min-height: 350px;
+    }
+
+    .ashikur-about-person {
+        height: 350px;
+    }
+
+    .ashikur-about-right {
+        padding-bottom: 35px;
+    }
+}
+
+@media (max-width: 767px) {
+    .ashikur-about-section {
+        padding-top: 35px;
+    }
+
+    .ashikur-container {
+        padding: 0 20px;
+    }
+
+    .ashikur-about-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .ashikur-about-left {
+        min-height: auto;
+        width: 100%;
+    }
+
+    .ashikur-about-person {
+        max-width: 400px;
+        height: auto;
+        max-height: 380px;
+    }
+
+    .ashikur-about-right {
+        text-align: center;
+        padding: 15px 0 45px;
+    }
+
+    .ashikur-about-title {
+        font-size: 34px;
+        margin-bottom: 16px;
+    }
+
+    .ashikur-about-desc {
+        max-width: 550px;
+        margin: 0 auto 25px;
+    }
+
+    .ashikur-about-btn {
+        padding: 12px 30px;
+    }
+
+    .ashikur-green-circle {
+        width: 140px;
+        height: 140px;
+        right: 10px;
+        bottom: -70px;
+    }
+}
+
+@media (max-width: 575px) {
+    .ashikur-about-section {
+        padding-top: 25px;
+    }
+
+    .ashikur-container {
+        padding: 0 16px;
+    }
+
+    .ashikur-about-person {
+        max-height: 320px;
+    }
+
+    .ashikur-about-title {
+        font-size: 28px;
+    }
+
+    .ashikur-about-desc {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .ashikur-about-btn {
+        padding: 11px 26px;
+        font-size: 13px;
+        border-radius: 12px;
+    }
+
+    .ashikur-about-right {
+        padding-bottom: 35px;
+    }
+
+    .ashikur-green-circle {
+        width: 110px;
+        height: 110px;
+        bottom: -55px;
+    }
+}
+
+@media (max-width: 380px) {
+    .ashikur-about-title {
+        font-size: 25px;
+    }
+
+    .ashikur-about-person {
+        max-height: 280px;
+    }
+}
